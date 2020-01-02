@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "825439892120",
+    "firebase_url": "https://appcalimax.firebaseio.com",
+    "project_id": "appcalimax",
+    "storage_bucket": "appcalimax.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825439892120:android:de999a3aee362806a8d6ed",
+        "android_client_info": {
+          "package_name": "mx.excel.flutter_app_calimax"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825439892120-ukki61462ve9rcd5ggtvvsoicfo424ot.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.excel.flutter_app_calimax",
+            "certificate_hash": "3e92245185ca84d81beddcfc48529a1ed774998c"
+          }
+        },
+        {
+          "client_id": "825439892120-rj0fnuq3ldcgu5t6r80g7o115omccj7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkL65CCtCui5lFKdwAAnvSjE3HYIQtTgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825439892120-rj0fnuq3ldcgu5t6r80g7o115omccj7p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
