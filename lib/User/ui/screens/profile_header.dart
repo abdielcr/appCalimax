@@ -14,7 +14,7 @@ class ProfileHeader extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final title = Text(
-      'Profile',
+      'Perfil',
       style: TextStyle(
           fontFamily: 'Lato',
           color: Colors.white,
@@ -65,7 +65,7 @@ class ProfileHeader extends StatelessWidget {
       print(snapshot.data);
       user = User(uid: snapshot.data.uid,name: snapshot.data.displayName, email: snapshot.data.email, photoURL: snapshot.data.photoUrl);
       final title = Text(
-        'Profile',
+        'Perfil',
         style: TextStyle(
             fontFamily: 'Lato',
             color: Colors.white,

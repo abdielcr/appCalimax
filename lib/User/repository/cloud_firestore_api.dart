@@ -4,16 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_calimax/Place/model/place.dart';
 import 'package:flutter_app_calimax/Place/ui/widgets/card_image.dart';
 import 'package:flutter_app_calimax/User/model/user.dart';
+import 'package:flutter_app_calimax/User/model/pregunta.dart';
 import 'package:flutter_app_calimax/User/ui/widgets/profile_place.dart';
 
 class CloudFirestoreAPI {
 
   final String USERS = "users";
   final String PLACES = "places";
+  final String PREGUNTA = "pregunta";
 
   final Firestore _db = Firestore.instance;//Inicializa DB
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
+  //Actualizar Usuarios/Insertar
   void updateUserData(User user) async{
     DocumentReference ref = _db.collection(USERS).document(user.uid);
     return await ref.setData({
@@ -28,7 +31,20 @@ class CloudFirestoreAPI {
     }, merge: true);
 
   }
+  //Actualizar Usuarios/Insertar
+  void updatePregunta(Pregunta pregunta) async{
+    DocumentReference ref = _db.collection(PREGUNTA).document(pregunta.uid);
+    return await ref.setData({
+      'uid': pregunta.uid,
+      'name': pregunta.name,
+      'pregunta': pregunta.pregunta,
 
+    }, merge: true);
+
+  }
+
+
+//Actualizar lugares/insertar
   Future<void> updatePlaceData(Place place) async {
     CollectionReference refPlaces = _db.collection(PLACES);
 
@@ -54,6 +70,7 @@ class CloudFirestoreAPI {
 
   }
 
+  //A qui esta consultando Lista general o por Usuario
   List<ProfilePlace> buildMyPlaces(List<DocumentSnapshot> placesListSnapshot){
     List<ProfilePlace> profilePlaces = List<ProfilePlace>();
     placesListSnapshot.forEach((p) {
@@ -74,7 +91,7 @@ class CloudFirestoreAPI {
 
 
   }
-
+  //A qui esta consultando Lista general o por Usuario
   List<Place> buildPlaces(List<DocumentSnapshot> placesListSnapshot, User user) {
     List<Place> places = List<Place>();
 
@@ -94,6 +111,7 @@ class CloudFirestoreAPI {
     return places;
   }
 
+  //Consulta de los Likes
   Future likePlace(Place place, String uid) async {
     await _db.collection(PLACES).document(place.id).get()
         .then((DocumentSnapshot ds){

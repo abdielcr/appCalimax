@@ -13,6 +13,9 @@ import 'package:flutter_app_calimax/widgets/gradient_back.dart';
 import 'package:flutter_app_calimax/widgets/text_input.dart';
 import 'package:flutter_app_calimax/widgets/title_header.dart';
 
+
+//ADD place stear
+
 class AddPlaceScreen extends StatefulWidget {
 
   File image;
@@ -58,7 +61,7 @@ class _AddPlaceScreen extends State<AddPlaceScreen> {
               Flexible(
                 child: Container(
                   padding: EdgeInsets.only(top: 45.0, left: 20.0, right: 10.0),
-                  child: TitleHeader(title: "Add a new Place"),
+                  child: TitleHeader(title: "Sube Foto al Evento"),
               ))
 
 
@@ -93,16 +96,16 @@ class _AddPlaceScreen extends State<AddPlaceScreen> {
                   maxLines: 4,
                   controller: _controllerDescriptionPlace,
                 ),
-                Container(
+                /*Container(
                   margin: EdgeInsets.only(top: 20.0),
                   child: TextInputLocation(
                     hintText: "Add Location",
                     iconData: Icons.location_on),
-                ),
+                ),*/
                 Container(
                   width: 70.0,
                   child: ButtonPurple(
-                    buttonText: "Add Place",
+                    buttonText: "Sube Foto",
                     onPressed: () {
 
                       //ID del usuario logeado actualmente

@@ -4,15 +4,15 @@ import 'package:flutter_app_calimax/Place/model/place.dart';
 import 'package:flutter_app_calimax/User/bloc/bloc_user.dart';
 import 'package:flutter_app_calimax/widgets/button_purple.dart';
 
+
+
 class DescriptionPlace extends StatelessWidget {
 
   String namePlace;
   int stars;
-  String descriptionPlace;
-
+  String descriptionPlace
+  ;
   DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +128,7 @@ class DescriptionPlace extends StatelessWidget {
           ),
 
           child: Text(
-            "Hearts: ${place.likes}",
+            "Megusta: ${place.likes}",
             style: TextStyle(
                 fontFamily: "Lato",
                 fontSize: 18.0,

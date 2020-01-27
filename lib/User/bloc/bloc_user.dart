@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter_app_calimax/User/model/pregunta.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:flutter_app_calimax/Place/model/place.dart';
 import 'package:flutter_app_calimax/Place/repository/firebase_storage_repository.dart';
@@ -35,6 +36,8 @@ class UserBloc implements Bloc {
   //2. Registrar usuario en base de datos
   final _cloudFirestoreRepository = CloudFirestoreRepository();
   void updateUserData(User user) => _cloudFirestoreRepository.updateUserDataFirestore(user);
+  void updatePregunta(Pregunta pregunta) => _cloudFirestoreRepository.updatePreguntaFirestore(pregunta);
+
   Future<void> updatePlaceData(Place place) => _cloudFirestoreRepository.updatePlaceData(place);
   Stream<QuerySnapshot> placesListStream = Firestore.instance.collection(CloudFirestoreAPI().PLACES).snapshots();
   Stream<QuerySnapshot> get placesStream => placesListStream;
